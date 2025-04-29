@@ -5,6 +5,7 @@ import TransactionForm from "./component/Transactionform";
 import TransactionList from "./component/TransactionList";
 import MonthlyExpensesChart from "./component/MonthlyExpensesChart";
 import CategoryPieChart from "./component/CategoryPieChart";
+import BudgetDashboard from "./component/BudgetDashboard";
 
 export default function Home() {
   const [transactions, setTransactions] = useState([]);
@@ -44,10 +45,10 @@ export default function Home() {
 
       {/* Tab Navigation */}
       <div className="bg-white border-b shadow-sm">
-        <div className="max-w-6xl mx-auto flex">
+        <div className="max-w-6xl mx-auto flex overflow-x-auto">
           <button
             onClick={() => setActiveTab("dashboard")}
-            className={`py-4 px-6 font-medium ${
+            className={`py-4 px-6 font-medium whitespace-nowrap ${
               activeTab === "dashboard"
                 ? "text-indigo-600 border-b-2 border-indigo-600"
                 : "text-gray-600"
@@ -56,8 +57,18 @@ export default function Home() {
             Dashboard
           </button>
           <button
+            onClick={() => setActiveTab("budgets")}
+            className={`py-4 px-6 font-medium whitespace-nowrap ${
+              activeTab === "budgets"
+                ? "text-indigo-600 border-b-2 border-indigo-600"
+                : "text-gray-600"
+            }`}
+          >
+            Budgets
+          </button>
+          <button
             onClick={() => setActiveTab("add")}
-            className={`py-4 px-6 font-medium ${
+            className={`py-4 px-6 font-medium whitespace-nowrap ${
               activeTab === "add"
                 ? "text-indigo-600 border-b-2 border-indigo-600"
                 : "text-gray-600"
@@ -67,7 +78,7 @@ export default function Home() {
           </button>
           <button
             onClick={() => setActiveTab("history")}
-            className={`py-4 px-6 font-medium ${
+            className={`py-4 px-6 font-medium whitespace-nowrap ${
               activeTab === "history"
                 ? "text-indigo-600 border-b-2 border-indigo-600"
                 : "text-gray-600"
@@ -125,6 +136,13 @@ export default function Home() {
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">Spending by Category</h2>
                 <CategoryPieChart transactions={transactions} />
               </div>
+            </div>
+          )}
+
+          {/* Budget Dashboard View */}
+          {activeTab === "budgets" && (
+            <div className="bg-white p-6 rounded-lg shadow-md border">
+              <BudgetDashboard transactions={transactions} />
             </div>
           )}
 
