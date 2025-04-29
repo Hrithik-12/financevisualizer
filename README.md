@@ -1,34 +1,75 @@
-
 # 📊 Personal Finance Visualizer
 
 A minimalist personal finance tracker built with **Next.js 14**, **Tailwind CSS**, and **MongoDB**.  
-Easily track your income and expenses with clean charts and transaction history.
+Easily track your income and expenses with clean charts, transaction history, and budgeting tools.
 
 ---
 
-## ✨ Features (Stage 2 Completed)
+## 🚀 Project Stages
 
-- Add and update your income/expenses
-- View monthly expenses in a Bar Chart
-- See all transactions listed clearly
-- Minimalist, responsive, and fast UI
-- Backend API with MongoDB
-- **Total Expenses** displayed with dynamic summation
-- **Most Recent Transactions** listed in a clean, responsive card format
-- **Transaction History** organized with edit and delete functionality
-- Category breakdown with an interactive **Pie Chart** showing spending by category
-- Responsive layout with **dynamic card resizing** based on screen size
-- All charts and data are fetched from MongoDB in real-time
+### **Stage 1: Basic Transaction Tracking**
+- Add, Edit, and Delete transactions (amount, date, description)
+- View transaction list
+- Display a monthly expenses bar chart
+- Basic form validation to ensure all fields are filled properly
+
+---
+
+### **Stage 2: Categories**
+- All Stage 1 features, plus:
+  - Predefined categories for transactions (e.g., Food, Rent, Salary, etc.)
+  - Category-wise spending breakdown with an interactive **Pie Chart**
+  - Dashboard with **summary cards**:
+    - Total expenses
+    - Category breakdown
+    - Most recent transactions
+
+---
+
+### **Stage 3: Budgeting**
+- All Stage 2 features, plus:
+  - Set monthly category budgets
+  - Budget vs actual comparison chart to track spending vs allocated budget
+  - Simple spending insights to highlight trends or unusual spending patterns
+
+---
+
+## ✨ Features
+
+This application includes all features from Stages 1–3:
+
+- **Transaction Management**
+  - Add, edit, and delete transactions with amount, date, description, and category.
+  - Transaction list view with edit/delete functionality.
+- **Charts & Visualization**
+  - **Monthly Expenses Bar Chart** shows total spend per month.
+  - **Category Pie Chart** displays spending distribution by category.
+  - **Budget vs Actual Chart** compares budgeted vs actual spending per category.
+- **Dashboard**
+  - Summary cards for:
+    - Total expenses (current month).
+    - Most recent transactions.
+    - Category breakdown overview.
+- **Budgeting Tools**
+  - Set and update monthly budgets per category.
+  - Visualize budget adherence with comparison charts.
+  - Automated spending insights (warnings for overruns, daily average, highest category, etc.).
+- **UX & Utilities**
+  - Responsive layout and dynamic resizing for mobile and desktop.
+  - Form validation to prevent invalid entries.
+  - Toast notifications for success/error feedback.
+  - Clean, minimalist design using Tailwind CSS.
+  - Real-time data fetching from MongoDB via Next.js API routes.
 
 ---
 
 ## 🚀 Tech Stack
 
-- **Frontend:** Next.js, Tailwind CSS, Recharts
-- **Backend:** API Routes (Next.js) + MongoDB (Mongoose)
+- **Frontend:** Next.js, React, Tailwind CSS, Recharts
+- **Backend:** API Routes (Next.js App Router) + MongoDB (Mongoose)
 - **Animations:** Framer Motion
 - **Notifications:** React Hot Toast
-- **UI Components:** Custom cards for displaying transactions and summaries
+- **UI Components:** Custom cards, forms, and charts
 
 ---
 
@@ -36,71 +77,61 @@ Easily track your income and expenses with clean charts and transaction history.
 
 1. **Clone the repository**
 
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-```
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
 
 2. **Install dependencies**
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. **Set up environment variables**
 
-Create a `.env.local` file in the root with your MongoDB URI:
-
-```
-MONGODB_URI=your-mongodb-connection-string
-```
+   Create a `.env.local` file in the root with your MongoDB URI:
+   ```env
+   MONGODB_URI=your-mongodb-connection-string
+   ```
 
 4. **Run the development server**
 
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
-App will be running at: [http://localhost:3000](http://localhost:3000)
+   App will be running at: [http://localhost:3000](http://localhost:3000)
 
 ---
 
 ## 📸 Screenshots
-<img width="1470" alt="Screenshot 2025-04-28 at 8 51 04 PM" src="https://github.com/user-attachments/assets/616d8714-7ae0-4ac5-9f14-a8f076ad3c5b" />
-<img width="1470" alt="Screenshot 2025-04-28 at 8 50 46 PM" src="https://github.com/user-attachments/assets/5f93c130-3f6a-43b6-bba3-d8d1af2e6370" />
-<img width="1470" alt="Screenshot 2025-04-28 at 8 50 31 PM" src="https://github.com/user-attachments/assets/01b1a959-d303-4500-a36d-1715a64fabb3" />
+**Stage 2 Images**
+<img width="1470" alt="Dashboard Overview" src="https://github.com/user-attachments/assets/616d8714-7ae0-4ac5-9f14-a8f076ad3c5b" />
+<img width="1470" alt="Monthly Chart" src="https://github.com/user-attachments/assets/5f93c130-3f6a-43b6-bba3-d8d1af2e6370" />
+<img width="1470" alt="Pie Chart" src="https://github.com/user-attachments/assets/01b1a959-d303-4500-a36d-1715a64fabb3" />
 
-
----
-
- ## 📈 Future Improvements
-Add transaction type: Additions in green, Deductions in red
-
-Add predefined categories for transactions (Food, Rent, Salary, etc.)
-
-Show a category-wise Pie Chart (expenses breakdown)
-
-Build a dashboard with summary cards:
-
-Total Expenses
-
-Category breakdown
-
-Most recent transactions
-
-Set Monthly Category Budgets for better financial planning
-
-Budget vs Actual Comparison Chart to track spending vs. allocated budget
-
-Simple Spending Insights to highlight trends or unusual spending patterns
-
-Dark mode
+**Stage 3 images**
+<img width="1470" alt="Screenshot 2025-04-29 at 11 20 10 AM" src="https://github.com/user-attachments/assets/4c9d98ee-3125-47bc-8f54-e4b227aedb99" />
+<img width="1470" alt="Screenshot 2025-04-29 at 11 20 28 AM" src="https://github.com/user-attachments/assets/6a4ea55a-9bc0-45e1-ad19-da606263a8d6" /><img width="1470" alt="Screenshot 2025-04-29 at 11 20 43 AM" src="https://github.com/user-attachments/assets/6fcbb541-1c12-4d43-a7cf-40dc974ef9cf" />
 
 ---
+
+## 📈 Future Improvements
+
+- Add transaction type indicators (income vs expense) with color coding.
+- User authentication (NextAuth.js) for multi-user support.
+- Recurring transactions and reminders.
+- Dark mode toggle.
+- Push notifications for budget limits (80%, 100% thresholds).
+- Export data as CSV or PDF reports.
+
+
+
 
 ## 🧑‍💻 Author
 
-- Hrithik Garg
+- Hrithik Garg  
 - GitHub: [Hrithik-12](https://github.com/Hrithik-12)
 
 ---
@@ -109,4 +140,3 @@ Dark mode
 
 This project is open source and free to use. 🎉
 
----
